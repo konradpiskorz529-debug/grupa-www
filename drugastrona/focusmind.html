@@ -1,0 +1,96 @@
+
+	<!DOCTYPE html>
+<html lang="pl" id="top">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusMind — aplikacja do skupienia</title>
+  <link rel="stylesheet" href="focusmind.css" />
+  <meta name="description" content="Planowanie sesji, blokada rozpraszaczy i czytelne statystyki." />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <a class="brand-name" href="#top" id="brand">FocusMind</a>
+    </div>
+    <nav class="main-nav" aria-label="Nawigacja">
+      <ul>
+        <li><a href="#grid" data-nav>Funkcje</a></li>
+        <li><a href="#flex" data-nav>Plany</a></li>
+        <li><a href="#kontakt" data-nav>Kontakt</a></li>
+        <li><a href="#top" data-nav>Top</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="h-hero">
+      <div class="wrap">
+        <h1 id="h-hero">Wejdź w głęboki fokus</h1>
+        <p class="lead">Sesje pracy, przerwy i statystyki w jednym miejscu.</p>
+        <form class="cta" action="#kontakt" method="get">
+          <label for="email" class="sr-only">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="adres@email.com" required>
+          <button class="btn primary" type="submit">Zacznij</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="grid" class="section">
+      <div class="wrap">
+        <h2>Funkcje</h2>
+        <div class="grid">
+          <article class="card"><h3>Sesje</h3><p>Bloki pracy z przerwami.</p></article>
+          <article class="card"><h3>Blokada</h3><p>Mniej rozpraszaczy.</p></article>
+          <article class="card"><h3>Statystyki</h3><p>Postęp tygodniowy.</p></article>
+          <article class="card"><h3>Zadania</h3><p>Proste priorytety.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flex" class="section alt-theme" aria-labelledby="h-flex">
+      <div class="wrap">
+        <h2 id="h-flex">Plany</h2>
+        <div class="flex">
+          <article class="plan card" id="basic">
+            <h3>Basic</h3>
+            <p class="price">0 zł<span>/mies.</span></p>
+            <ul class="list"><li>Sesje i przerwy</li></ul>
+            <a class="btn ghost" href="#kontakt">Wybieram</a>
+          </article>
+          <article class="plan card highlight" id="pro">
+            <h3>Pro</h3>
+            <p class="price">19 zł<span>/mies.</span></p>
+            <ul class="list"><li>Wszystko z Basic</li><li>Blokada rozpraszaczy</li></ul>
+            <a class="btn primary" href="#kontakt">Wybieram</a>
+          </article>
+          <article class="plan card" id="team">
+            <h3>Team</h3>
+            <p class="price">49 zł<span>/mies.</span></p>
+            <ul class="list"><li>Workspace</li><li>Raporty</li><li>Wsparcie</li></ul>
+            <a class="btn ghost" href="#kontakt">Wybieram</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="wrap">
+        <h2>Kontakt</h2>
+        <div class="contact-grid">
+          <div class="contact card"><h3>E-mail</h3><p>hello@focusmind.app</p></div>
+          <div class="contact card"><h3>Regulamin</h3><p id="regulamin">Akceptujesz regulamin i politykę prywatności.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 FocusMind</small>
+      <a class="to-top" href="#top">Na górę</a>
+    </div>
+  </footer>
+</body>
+</html>
