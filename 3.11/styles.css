@@ -1,0 +1,24 @@
+/* proste style, bez wodotrysków */
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0f1117;color:#e6edf3}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+.tabs{display:flex;gap:8px;margin-top:8px}
+.tab{border:1px solid #2b2f3a;background:#1b1f2a;color:#e6edf3;padding:8px 12px;border-radius:10px;cursor:pointer}
+.tab.active{border-color:#7c5cff}
+.panel{display:none;margin-top:16px}
+.panel.show{display:block}
+
+/* kalkulator */
+.calculator{max-width:360px;background:#161a23;border:1px solid #2b2f3a;border-radius:12px;padding:12px}
+.display{width:100%;font-size:26px;padding:10px;border-radius:8px;border:1px solid #2b2f3a;background:#0b0e16;color:#e6edf3;text-align:right;margin-bottom:10px}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.keys button{padding:12px;border:none;border-radius:8px;background:#222637;color:#e6edf3;font-size:18px;cursor:pointer}
+
+/* quiz */
+.card{background:#161a23;border:1px solid #2b2f3a;border-radius:12px;padding:12px;max-width:720px}
+.answers{display:grid;gap:8px;margin-top:10px}
+.answer{padding:10px;border:1px solid #2b2f3a;border-radius:8px;background:#222637;color:#e6edf3;cursor:pointer;text-align:left}
+.answer[disabled]{opacity:.75;cursor:not-allowed}
+.answer.correct{outline:2px solid #20c997}
+.answer.wrong{outline:2px solid #ff6b6b}
+.row{display:flex;gap:8px;margin-top:10px}
+.hint{opacity:.8}

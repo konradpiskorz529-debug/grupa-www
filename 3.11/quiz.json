@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Który znacznik w HTML tworzy link?",
+    "answers": [
+      "<div>",
+      "<a>",
+      "<link>",
+      "<href>"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "question": "2 * (3 + 4) = ?",
+    "answers": [
+      "14",
+      "10",
+      "9",
+      "7"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Co NIE jest typem w JavaScript?",
+    "answers": [
+      "number",
+      "string",
+      "character",
+      "boolean"
+    ],
+    "correctIndex": 2
+  }
+]

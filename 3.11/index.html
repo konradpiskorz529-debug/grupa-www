@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator + Quiz (JSON)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <h1>Kalkulator i Quiz</h1>
+    <div class="tabs">
+      <button class="tab active" data-tab="calc">Kalkulator</button>
+      <button class="tab" data-tab="quiz">Quiz</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="calc" class="panel show">
+      <div class="calculator">
+        <input id="display" class="display" type="text" inputmode="decimal" readonly>
+        <div class="keys">
+          <button data-action="clear">C</button>
+          <button data-action="back">⌫</button>
+          <button data-action="percent">%</button>
+          <button data-value="/">÷</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="*">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="-">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="+">+</button>
+
+          <button data-action="neg">±</button>
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button data-action="equals">=</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="panel">
+      <div class="card">
+        <div id="quiz-body">
+          <p>Kliknij „Start”, aby wczytać pytania.</p>
+        </div>
+        <div class="row">
+          <button id="start">Start</button>
+          <button id="next" disabled>Następne</button>
+        </div>
+      </div>
+      <p class="hint">Uwaga: quiz wczytuje plik <code>quiz.json</code>, więc uruchom folder na prostym serwerze (np. VS Code Live Server).</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
