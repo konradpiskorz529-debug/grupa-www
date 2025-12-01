@@ -8,7 +8,7 @@ document.querySelectorAll('.tab').forEach(btn=>{
   });
 });
 
-// Kalkulator (prosty, ale bezpieczny eval)
+// Kalkulator 
 const display = document.getElementById('display');
 document.querySelector('.keys').addEventListener('click', e=>{
   const b = e.target.closest('button'); if(!b) return;
