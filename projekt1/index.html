@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert Lewandowski – Strona Fanowska</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">⚽ Robert Lewandowski</div>
+    <nav>
+      <a href="#">Strona główna</a>
+      <a href="#historia">Historia</a>
+      
+      <label for="popup-toggle" class="btn-popup">Rekordy</label>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Kim jest Robert Lewandowski?</h2>
+      <div class="photo-wrapper">
+        <img src="https://img.wprost.pl/img/kontrowersyjne-slowa-nt-roberta-lewandowskiego-byly-reprezentant-nazwal-go-egoista/d3/75/6bbd52aaf4cd0435d5a0a6f3c004.webp" alt="Robert Lewandowski">
+      </div>
+      <p>Robert Lewandowski to jeden z najlepszych napastników w historii piłki nożnej, wielokrotny król strzelców i kapitan reprezentacji Polski.</p>
+      <p id="important">Obecnie gra w FC Barcelonie i wciąż zachwyca świat swoją skutecznością.</p>
+      <div data-info="note">Znany jest z perfekcyjnej techniki, siły fizycznej i wyjątkowego zmysłu strzeleckiego.</div>
+    </section>
+
+    <aside class="card">
+      <h3>Najważniejsze osiągnięcia</h3>
+      <p></p>
+      <p>• Rekord świata: 5 goli w 9 minut.</p>
+      <p>• 11 razy mistrz Polski i Niemiec.</p>
+      <p>• Najlepszy piłkarz FIFA 2020 i 2021.</p>
+      <p>• Ponad 600 bramek w karierze.</p>
+      <p>• Zwycięstwo w Lidze Mistrzów.</p>
+      <p>• Najwięcej strzelonych bramek w jednym sezonie Bundesligi.</p>
+    </aside>
+  </main>
+
+  <section id="historia" class="card historia-section">
+    <h2>Historia Roberta Lewandowskiego</h2>
+    <p></p>
+    <p>Robert Lewandowski urodził się 21 sierpnia 1988 roku w Warszawie. Swoją piłkarską przygodę zaczynał w Varsovii, skąd przeszedł do Znicza Pruszków, gdzie zdobył tytuł króla strzelców II oraz I ligi.</p>
+    <p>Później trafił do Lecha Poznań, z którym zdobył mistrzostwo Polski i stał się jednym z najbardziej obiecujących napastników młodego pokolenia.</p>
+    <p>W 2010 roku przeszedł do Borussii Dortmund, gdzie zdobył dwa mistrzostwa Niemiec i dotarł do finału Ligi Mistrzów.</p>
+    <p>Następnie stał się legendą Bayernu Monachium, zdobywając setki bramek oraz pobijając historyczne rekordy Bundesligi.</p>
+    <p>Od 2022 roku reprezentuje FC Barcelonę, kontynuując swoją niezwykle bogatą karierę.</p>
+  </section>
+
+  <footer>
+    © 2024 Strona fanowska Roberta Lewandowskiego
+  </footer>
+
+  
+  <input type="checkbox" id="popup-toggle" hidden>
+  <div class="overlay">
+    <div class="popup">
+      <h2>Rekordy Lewandowskiego</h2>
+      <p>Robert Lewandowski pobił dziesiątki rekordów, z których najbardziej niesamowity to strzelenie 5 goli w 9 minut w meczu Bayernu Monachium.</p>
+      <p>Jest również jednym z najlepszych strzelców w historii Bundesligi i reprezentacji Polski.</p>
+      <label for="popup-toggle" class="close-btn">Zamknij</label>
+    </div>
+  </div>
+</body>
+</html>
