@@ -1,0 +1,28 @@
+# --- Node / npm ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment variables  ---
+.env
+.env.* 
+!.env.example
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- build / cache ---
+dist/
+build/
+coverage/
+*.log
+
+
+# database.sqlite
+# *.sqlite
+# *.sqlite3

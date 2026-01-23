@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager — Projekty</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <h1 class="brand">Task Manager</h1>
+        <nav class="nav">
+          <a class="nav__link nav__link--active" href="/index.html">Projekty</a>
+          <a class="nav__link" href="/stats.html">Statystyki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2 class="card__title">Dodaj projekt</h2>
+
+        <form id="projectForm" class="form">
+          <label class="label" for="projectName">Nazwa projektu</label>
+          <div class="row">
+            <input
+              id="projectName"
+              name="name"
+              class="input"
+              type="text"
+              minlength="2"
+              placeholder="np. Szkoła"
+              required
+            />
+            <button class="btn" type="submit">Dodaj</button>
+          </div>
+          <p class="hint">Min. 2 znaki. Nazwa będzie widoczna na liście.</p>
+        </form>
+
+        <div id="message" class="message" aria-live="polite"></div>
+      </section>
+
+      <section class="card">
+        <div class="card__header">
+          <h2 class="card__title">Twoje projekty</h2>
+          <button id="refreshBtn" class="btn btn--ghost" type="button">Odśwież</button>
+        </div>
+
+        <div id="projectsList" class="list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>Backend: Express + SQLite</span>
+        <span class="muted">/api/projects</span>
+      </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/projects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager — Statystyki</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <h1 class="brand">Task Manager</h1>
+        <nav class="nav">
+          <a class="nav__link" href="/index.html">Projekty</a>
+          <a class="nav__link nav__link--active" href="/stats.html">Statystyki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <div class="card__header">
+          <h2 class="card__title">Statystyki zadań</h2>
+          <button id="refreshBtn" class="btn btn--ghost" type="button">Odśwież</button>
+        </div>
+
+        <p class="hint" id="summary">Ładowanie...</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__label">Wszystkie</div>
+            <div class="stat__value" id="allCount">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">todo</div>
+            <div class="stat__value" id="todoCount">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">doing</div>
+            <div class="stat__value" id="doingCount">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">done</div>
+            <div class="stat__value" id="doneCount">0</div>
+          </div>
+        </div>
+
+        <div id="message" class="message" aria-live="polite"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Per projekt</h2>
+        <div id="perProject" class="list"></div>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/stats.js"></script>
+  </body>
+</html>

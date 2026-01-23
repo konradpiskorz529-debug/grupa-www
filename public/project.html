@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager — Zadania</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <h1 class="brand">Task Manager</h1>
+        <nav class="nav">
+          <a class="nav__link" href="/index.html">Projekty</a>
+          <a class="nav__link" href="/stats.html">Statystyki</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <div class="card__header">
+          <div>
+            <h2 class="card__title">Zadania</h2>
+            <p class="hint" id="projectInfo">Ładowanie projektu...</p>
+          </div>
+          <button id="backBtn" class="btn btn--ghost" type="button">← Wróć</button>
+        </div>
+
+        <form id="taskForm" class="form">
+          <label class="label" for="taskTitle">Nowe zadanie</label>
+          <input
+            id="taskTitle"
+            class="input"
+            type="text"
+            minlength="2"
+            placeholder="np. Zrobić UI"
+            required
+          />
+
+          <label class="label" for="taskDesc">Opis (opcjonalnie)</label>
+          <input id="taskDesc" class="input" type="text" placeholder="np. modal edycji" />
+
+          <div class="row">
+            <div style="flex:1">
+              <label class="label" for="taskStatus">Status</label>
+              <select id="taskStatus" class="input">
+                <option value="todo">todo</option>
+                <option value="doing">doing</option>
+                <option value="done">done</option>
+              </select>
+            </div>
+
+            <div style="flex:1">
+              <label class="label" for="taskDue">Termin (opcjonalnie)</label>
+              <input id="taskDue" class="input" type="date" />
+            </div>
+
+            <div style="align-self:end">
+              <button class="btn" type="submit">Dodaj</button>
+            </div>
+          </div>
+
+          <div id="message" class="message" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card__header">
+          <h2 class="card__title">Lista zadań</h2>
+          <button id="refreshBtn" class="btn btn--ghost" type="button">Odśwież</button>
+        </div>
+
+        <div id="tasksList" class="list"></div>
+      </section>
+    </main>
+
+    <!-- MODAL edycji -->
+    <div class="modal" id="editModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="1"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+        <div class="modal__header">
+          <h3 id="editTitle" class="modal__title">Edytuj zadanie</h3>
+          <button class="btn btn--ghost" type="button" data-close="1">✕</button>
+        </div>
+
+        <form id="editForm" class="form">
+          <input type="hidden" id="editId" />
+
+          <label class="label" for="editTaskTitle">Tytuł</label>
+          <input id="editTaskTitle" class="input" minlength="2" required />
+
+          <label class="label" for="editTaskDesc">Opis</label>
+          <input id="editTaskDesc" class="input" />
+
+          <div class="row">
+            <div style="flex:1">
+              <label class="label" for="editTaskStatus">Status</label>
+              <select id="editTaskStatus" class="input">
+                <option value="todo">todo</option>
+                <option value="doing">doing</option>
+                <option value="done">done</option>
+              </select>
+            </div>
+
+            <div style="flex:1">
+              <label class="label" for="editTaskDue">Termin</label>
+              <input id="editTaskDue" class="input" type="date" />
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" type="submit">Zapisz</button>
+            <button class="btn btn--ghost" type="button" data-close="1">Anuluj</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/tasks.js"></script>
+  </body>
+</html>
